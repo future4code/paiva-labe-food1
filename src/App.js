@@ -1,10 +1,13 @@
 import React from 'react';
+import GlobalState from './global/GlobalState';
+import Router from './routes/Router';
+
 
 const App = () => {
   return (
-    <div>
-      iFuture
-    </div>
+    <GlobalState>
+     <Router />
+    </GlobalState>
   );
 }
 
