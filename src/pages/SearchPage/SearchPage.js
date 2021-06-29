@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ErrorPage = () => {
+const SearchPage = () => {
   return (
     <div>
       <h1>Tela de Cadastro de Endereço</h1>
@@ -8,4 +8,4 @@ const ErrorPage = () => {
   );
 }
 
-export default ErrorPage;
+export default SearchPage;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HomeScreen = () => {
+const SplashScreen = () => {
   return (
     <div>
       <h1>Tela inicial</h1>
@@ -8,4 +8,4 @@ const HomeScreen = () => {
   );
 }
 
-export default HomeScreen;
+export default SplashScreen;
