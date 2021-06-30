@@ -1,10 +1,15 @@
 import React from 'react';
+import { ScreenContainer, LogoImage, H1} from './styled';
+import logo from '../../assets/logo.svg';
+import NewAddressForm from '../../components/NewAddressForm/NewAddressForm';
 
 const AddressScreenPage = () => {
+
   return (
-    <div>
-      <h1>Tela de Cadastro de Endereço</h1>
-    </div>
+    <ScreenContainer>
+      <H1>Meu endereço</H1>
+      <NewAddressForm/>
+    </ScreenContainer>
   );
 }
 
