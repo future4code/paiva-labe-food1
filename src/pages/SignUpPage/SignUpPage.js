@@ -1,10 +1,16 @@
 import React from 'react';
+import { ScreenContainer, LogoImage, H1} from './styled';
+import logo from '../../assets/logo.svg';
+import SignUpForm from '../../components/SignUpForm/SignUpForm';
 
 const SignUpPage = () => {
+
   return (
-    <div>
-      <h1>Tela de Cadastro</h1>
-    </div>
+    <ScreenContainer>
+      <LogoImage src={logo} />
+      <H1>Cadastrar</H1>
+      <SignUpForm/>
+    </ScreenContainer>
   );
 }
 
