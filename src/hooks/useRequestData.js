@@ -18,7 +18,7 @@ const useRequestData = (initialState, url, headerParam) => {
         .then((res) => {
             setData(res.data)
         })
-        .catch(() => {
+        .catch((err) => {
             alert("Algo deu errado, tente novamente!")
         })
     };

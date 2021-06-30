@@ -31,9 +31,13 @@ export const goToCart = (history) => {
 }
 
 export const goToEditUser = (history) => {
-    history.push("/perfil/editar/endereco")
+    history.push("/perfil/editar/perfil")
 }
 
 export const goToSearch = (history) => {
     history.push("/feed/buscar")
+}
+
+export const goToEditAddress = (history) => {
+    history.push("perfil/editar/endereco")
 }

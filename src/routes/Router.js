@@ -53,7 +53,7 @@ const Router = () => {
               <CartPage />
           </Route>
 
-          <Route exact path="/perfil/editar/usuário">
+          <Route exact path="/perfil/editar/perfil">
               <EditUserPage />
           </Route>
 
