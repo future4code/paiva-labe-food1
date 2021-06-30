@@ -1,9 +1,10 @@
 import React from 'react';
+import CardProfile from '../../components/CardProfile/CardProfile';
 
 const ProfilePage = () => {
   return (
     <div>
-      <h1>Tela de perfil do usuário</h1>
+      <CardProfile/>
     </div>
   );
 }
