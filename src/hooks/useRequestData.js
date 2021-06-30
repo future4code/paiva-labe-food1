@@ -5,7 +5,7 @@ import {BASE_URL} from '../constants/urls'
 
 const useRequestData = (initialState, url, headerParam) => {
 
-    /* const [data, setData] = useState(initialState)
+     const [data, setData] = useState(initialState)
 
     const getData = () => {
 
@@ -18,7 +18,7 @@ const useRequestData = (initialState, url, headerParam) => {
         .then((res) => {
             setData(res.data)
         })
-        .catch(() => {
+        .catch((err) => {
             alert("Algo deu errado, tente novamente!")
         })
     };
@@ -27,7 +27,7 @@ const useRequestData = (initialState, url, headerParam) => {
         getData();
     }, []);
 
-    return {data, getData}; */
+    return {data, getData}; 
 }
 
 export default useRequestData;
