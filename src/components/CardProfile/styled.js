@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import {primaryColor, secondaryColor} from '../../constants/colors'
+import { secondaryColor} from '../../constants/colors'
 
 export const Container = styled.div `
-  width: 360px;
-  height: 640px;
-  margin: auto;
+    width: 360px;
+    height: 640px;
+    margin: auto;
 `
 export const Header = styled.div `
     width: 100%;
@@ -21,7 +21,7 @@ export const Profile = styled.div `
 export const AddressText = styled.p `
     color: ${secondaryColor};
     font-size: 16px;
-    font-family: 'Roboto-regular';
+    font-family: Roboto;
     padding: 16px 16px 0px 16px;
     margin-top: 0;
 `
@@ -32,7 +32,7 @@ export const Adress = styled.div `
 `
 export const Text = styled.p `
     font-size: 16px;
-    font-family: 'Roboto-regular';
+    font-family: Roboto;
     margin: 8px 16px 0px 16px;
     padding-bottom: 8px;
 `
@@ -41,22 +41,44 @@ export const OrderHistory = styled.div `
     padding-top: 16px;
     padding-bottom: 8px;
     font-size: 16px;
+    font-family: Roboto;
     border-bottom: 1px solid black;
 `
 
 export const OrderCard = styled.div `
-  width: 100%;
-  height: 110px;
-  margin: 7px 16px 0px 16px;
-  border-radius: 8px;
-  border: solid 1px ${secondaryColor};
+    width: 328px;
+    height: 110px;
+    margin: 7px 16px 0px 16px;
+    border-radius: 8px;
+    border: solid 1px ${secondaryColor};
 `
 
 export const TitleCard = styled.p `
     color: #e86e5a;
     font-size: 16px;
-    font-family: "Roboto-Regular";
+    font-family: Roboto;
 `
 export const TextContainer = styled.div `
     margin: 16px 16px 16px 16px;
+`
+
+export const ProfileButton = styled.button `
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 80px;
+    margin-right: 16px;
+    margin-left: 304px;
+    border: none;
+    background-color: white;
+`
+
+export const AddressButton = styled.button `
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 200px;
+    margin-right: 16px;
+    margin-left: 304px;
+    border: none;
 `
