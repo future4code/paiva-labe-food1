@@ -41,6 +41,7 @@ export const OrderHistory = styled.div `
     padding-top: 16px;
     padding-bottom: 8px;
     font-size: 16px;
+    font-family: Roboto;
     border-bottom: 1px solid black;
 `
 

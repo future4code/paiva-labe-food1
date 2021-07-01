@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import {goToProfile} from '../../routes/coordinator';
 import useForm from '../../hooks/useForm';
 import {updateProfile} from '../../services/user';
-import { Container, EditAddressContainer, StyledInput, StyledButton, Header, LabelBairro, LabelCidade, LabelComplemento, LabelEstado, LabelLogradouro, LabelNumero } from './styled';
+import { Container, EditAddressContainer, StyledInput, StyledButton, Header } from './styled';
 import GlobalStateContext from '../../global/GlobalStateContext';
 
 const EditAddress = () => {
@@ -24,12 +24,6 @@ const EditAddress = () => {
     }
     return (
         <Container>
-            <LabelLogradouro>Logradouro*</LabelLogradouro>
-            <LabelNumero>Número*</LabelNumero>
-            <LabelComplemento>Complemento*</LabelComplemento>
-            <LabelBairro>Bairro*</LabelBairro>
-            <LabelCidade>Cidade*</LabelCidade>
-            <LabelEstado>Estado*</LabelEstado>
             <Header>
                 <button onClick={() => goToProfile(history)}>Voltar</button>
             </Header>

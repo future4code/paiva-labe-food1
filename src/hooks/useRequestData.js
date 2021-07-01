@@ -5,10 +5,9 @@ import {BASE_URL} from '../constants/urls'
 
 const useRequestData = (initialState, url, headerParam) => {
 
-     const [data, setData] = useState(initialState)
-
+    const [data, setData] = useState(initialState)
+    
     const getData = () => {
-
         const header = {
             headers: headerParam
         }

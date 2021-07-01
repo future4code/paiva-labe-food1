@@ -9,6 +9,7 @@ import { useHistory } from "react-router";
 const CardProfile = () => {
     const history = useHistory()
     const {profile, address, orderHistory} = useContext(GlobalStateContext)
+    
     const addressInfo = address.address ? <Text>{address.address.street}, {address.address.number} - {address.address && address.address.city}</Text> 
     : <Text>Carregando...</Text>
     const profileName = profile.user ? <Text>{profile.user.name}</Text> : <Text>Carregando...</Text>
