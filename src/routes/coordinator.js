@@ -41,3 +41,7 @@ export const goToSearch = (history) => {
 export const goToEditAddress = (history) => {
     history.push("perfil/editar/endereco")
 }
+
+export const previousPage = (history) => {
+    history.goBack();
+}

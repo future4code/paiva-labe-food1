@@ -15,7 +15,6 @@ export const updateProfile = (info, body, cleanFields) => {
     })
 }
 
-
 export const login = (body, cleanFields) => {
     
     axios.post(`${BASE_URL}/login`, body)
