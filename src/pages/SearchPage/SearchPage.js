@@ -4,8 +4,10 @@ import CardSearchPage from '../../components/CardSearch/CardSearchPage';
 import Header from '../../components/Header/Header';
 import { Search, SearchMainContainer, InputSearch, InitialSearchBox } from './styled';
 import { Scrollbars } from 'react-custom-scrollbars';
+import useProtectedPage from '../../hooks/useProtectedPage';
 
 const SearchPage = () => {
+  useProtectedPage();
   const { restaurantsInfo } = useContext(GlobalStateContext);
   const allRestaurants = restaurantsInfo.restaurants;
   const [nameFilter, setNameFilter] = useState("")
