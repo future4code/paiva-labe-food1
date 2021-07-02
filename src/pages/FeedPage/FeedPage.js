@@ -8,8 +8,10 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import { Scrollbars } from 'react-custom-scrollbars';
 import searchIcon from '../../assets/FeedPageIcons/search.svg';
+import useProtectedPage from '../../hooks/useProtectedPage';
 
 const FeedPage = () => {
+  useProtectedPage();
   const history = useHistory();
   const { restaurantsInfo } = useContext(GlobalStateContext);
   const allRestaurants = restaurantsInfo.restaurants;
