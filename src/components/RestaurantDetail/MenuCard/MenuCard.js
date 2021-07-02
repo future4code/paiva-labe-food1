@@ -8,13 +8,9 @@ import { ItensMenu } from './styled'
 
 const MenuCard = () => {
 
-    //const {teste}= useContext(GlobalStateContext)
     const { order, setOrder } = useContext(GlobalStateContext)
-
     const params = useParams();
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InluRVFMZGVlU0xOVWF6YmZvc0RLIiwibmFtZSI6IlJhcHBpNCBUZXN0ZSBDb20gRW5kZXJlw6dvIiwiZW1haWwiOiJyYXBwaTR0ZXN0ZV9jb21fZW5kZXJlY29AZnV0dXJlNC5jb20iLCJjcGYiOiI5OTkuNjY2LjMzMy01NyIsImhhc0FkZHJlc3MiOnRydWUsImFkZHJlc3MiOiJSLiBCcmFzaWxlaXJvIENvcmRpbGhlaXJvLCA2NTYsIDE1NiAtIEpvc2VmaW5hIEFwYXJlY2lkYSIsImlhdCI6MTYyNDk5Mjg4MH0.FFw5Ii3wgloj8fFeygPuMsr5uCTnO3N6CSDupXbHRl4"
-    //const [data] = useRequestData({}, `restaurants/${params.id}`, { auth: localStorage.getItem("token") })
-    const { data: restaurantDetail } = useRequestData({}, `restaurants/${params.id}`, { auth: token })
+    const { data: restaurantDetail } = useRequestData({}, `/restaurants/${params.id}`, {auth: localStorage.getItem("token") })
     const restaurantProducts = restaurantDetail.restaurant && restaurantDetail.restaurant.products
     const [showDialog, setShowDialog] = useState(false)
     const [idProdSelect, setIdProdSelect] = useState("")

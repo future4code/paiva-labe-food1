@@ -8,25 +8,31 @@ const useRequestData = (initialState, url, headerParam) => {
     const [data, setData] = useState(initialState)
     
     const getData = () => {
-        const header = {
-            headers: headerParam
+        if(localStorage.getItem("token")){
+            const header = {
+                headers: headerParam
+            }
+    
+            axios
+            .get(`${BASE_URL}${url}`, header)
+            .then((res) => {
+                setData(res.data)
+            })
+            .catch((err) => {
+                console.log(err)
+                alert("Use request")
+            })
+        } else {
+            return;
         }
-
-        axios
-        .get(`${BASE_URL}/${url}`, header)
-        .then((res) => {
-            setData(res.data)
-        })
-        .catch((err) => {
-            alert("Use request")
-        })
+        
     };
 
     useEffect(() => {
         getData();
     }, []);
 
-    return {data, getData};
+    return {data, getData}; 
 }
 
 export default useRequestData;

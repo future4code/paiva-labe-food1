@@ -20,8 +20,8 @@ export const login = (body, cleanFields) => {
     axios.post(`${BASE_URL}/login`, body)
         .then((res) => {
             localStorage.setItem("token", res.data.token)
+            localStorage.setItem("hasAddress", res.data.user.hasAddress)
             cleanFields()
-
         })
         .catch((err) => {
             alert("Erro ao fazer login, tente novamente")

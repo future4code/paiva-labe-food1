@@ -54,7 +54,7 @@ const Header = () => {
                 return <p>Meu carrinho</p>;
             case "/perfil":
                 return <p>Meu perfil</p>;
-            case "/perfil/editar/usuário":
+            case "/perfil/editar/perfil":
                 return <p>Editar</p>;
             case "/perfil/editar/endereco":
                 return <p>Endereço</p>;
