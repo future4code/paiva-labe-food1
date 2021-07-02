@@ -4,8 +4,8 @@ import {BASE_URL} from '../constants/urls'
 
 
 const useRequestData = (initialState, url, headerParam) => {
-
-    /* const [data, setData] = useState(initialState)
+    
+    const [data, setData] = useState(initialState)
 
     const getData = () => {
 
@@ -14,7 +14,7 @@ const useRequestData = (initialState, url, headerParam) => {
         }
 
         axios
-        .get(`${BASE_URL}${url}`, header)
+        .get(`${BASE_URL}/${url}`, header)
         .then((res) => {
             setData(res.data)
         })
@@ -27,7 +27,7 @@ const useRequestData = (initialState, url, headerParam) => {
         getData();
     }, []);
 
-    return {data, getData}; */
+    return {data, getData};
 }
 
 export default useRequestData;
