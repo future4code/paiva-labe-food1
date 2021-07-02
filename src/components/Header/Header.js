@@ -3,7 +3,7 @@ import { HeaderContainer, HeadNavContainer, EmptyIconBox, IconBox, PageNameBox }
 import PhoneInfo from '../PhoneInfo/PhoneInfo';
 import backIcon from '../../assets/HeaderIcons/backIcon.svg';
 import { useHistory, useParams } from 'react-router-dom';
-import { goToLogin, previousPage } from '../../routes/coordinator';
+import { goToFeed, goToLogin, goToProfile } from '../../routes/coordinator';
 
 const Header = () => {
     const history = useHistory();
@@ -15,15 +15,31 @@ const Header = () => {
             return (
                 <EmptyIconBox></EmptyIconBox>
             )
+        } else if (pathname === "/cadastro") {
+            return (
+                <IconBox onClick={() => {goToLogin(history)}} src={backIcon} alt={"ícone de voltar"} />
+            )
         } else if (pathname === "/cadastro/endereco") {
             return (
                 <IconBox onClick={() => {goToLogin(history)}} src={backIcon} alt={"ícone de voltar"} />
             )
-        } else {
-            return(
-                <IconBox onClick={() => {previousPage(history)}} src={backIcon} alt={"ícone de voltar"} />
+        } else if (pathname === "/feed/buscar") {
+            return (
+                <IconBox onClick={() => {goToFeed(history)}} src={backIcon} alt={"ícone de voltar"} />
             )
-        }
+        } else if (pathname === `/detalhes/${params.id}`) {
+            return (
+                <IconBox onClick={() => {goToFeed(history)}} src={backIcon} alt={"ícone de voltar"} />
+            )
+        } else if (pathname === "/perfil/editar/perfil") {
+            return (
+                <IconBox onClick={() => {goToProfile(history)}} src={backIcon} alt={"ícone de voltar"} />
+            )
+        } else if (pathname === "/perfil/editar/endereco") {
+            return (
+                <IconBox onClick={() => {goToProfile(history)}} src={backIcon} alt={"ícone de voltar"} />
+            )
+        } 
     }
 
     const renderPageName = () => {

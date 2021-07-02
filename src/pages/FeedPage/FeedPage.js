@@ -3,7 +3,7 @@ import { goToSearch } from '../../routes/coordinator';
 import { useHistory } from 'react-router-dom';
 import GlobalStateContext from '../../global/GlobalStateContext';
 import CardFeedPage from '../../components/CardFeed/CardFeedPage';
-import { Feed, FeedMainContainer, TransitionButton, CategoriesContainer } from './styled';
+import { Feed, FeedMainContainer, TransitionButton, CategoriesContainer, CategorieParagraph } from './styled';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import { Scrollbars } from 'react-custom-scrollbars';
@@ -33,11 +33,13 @@ const FeedPage = () => {
     return a.localeCompare(b);
   }).map((category) => {
     return (
-      <p
+      <CategorieParagraph
         key={category}
         onClick={() => { filterByCategory(category) }}
+        categoryFiltered={categoryFilter}
+        category={category}
       >{category}
-      </p>
+      </CategorieParagraph>
     )
   });
 
