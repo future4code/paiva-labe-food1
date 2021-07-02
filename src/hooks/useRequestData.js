@@ -4,11 +4,10 @@ import {BASE_URL} from '../constants/urls'
 
 
 const useRequestData = (initialState, url, headerParam) => {
-    
+
     const [data, setData] = useState(initialState)
-
+    
     const getData = () => {
-
         const header = {
             headers: headerParam
         }
@@ -18,8 +17,8 @@ const useRequestData = (initialState, url, headerParam) => {
         .then((res) => {
             setData(res.data)
         })
-        .catch(() => {
-            alert("Algo deu errado, tente novamente!")
+        .catch((err) => {
+            alert("Use request")
         })
     };
 
