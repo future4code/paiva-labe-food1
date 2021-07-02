@@ -44,19 +44,25 @@ export const CategoriesContainer = styled.div`
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
+`
 
-  p {
-    width: 87px;
-    height: 18px;
-    margin: 0 8px 0 16px;
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: -0.39px;
-    text-align: center;
-    color: var(--dark-peach);
-  }
+export const CategorieParagraph = styled.p`
+  width: 87px;
+  height: 18px;
+  margin: 0 8px 0 16px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  text-align: center;
+  ${(props) => {
+    if (props.categoryFiltered === props.category) {
+      return 'color:red';
+    } else if (props.categoryFiltered === "") {
+      return "color:black";
+    }
+  }};
 `
