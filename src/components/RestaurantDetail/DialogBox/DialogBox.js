@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import GlobalStateContext from '../../../global/GlobalStateContext'
 import {addProductToOrder} from '../../../services/placeOrder'
+import {BoxContainer, TitleBox, SelectQuantity, AddToCartButton} from './styled'
 
 const DialogBox = (props) => {
 
@@ -25,13 +26,13 @@ const DialogBox = (props) => {
     })
 
     return (
-        <div>
-            <h3>Selecione a quantidade desejada</h3>
-            <select name={"quantity"} onChange={onChangeQnttOrder}>
+        <BoxContainer>
+            <TitleBox>Selecione a quantidade desejada</TitleBox>
+            <SelectQuantity name={"quantity"} onChange={onChangeQnttOrder}>
                 {renderQuantity}
-            </select>
-            <button onClick={closeToDialogBox}>ADICIONAR AO CARRINHO</button>
-        </div>
+            </SelectQuantity>
+            <AddToCartButton onClick={closeToDialogBox}>ADICIONAR AO CARRINHO</AddToCartButton>
+        </BoxContainer>
     )
 }
 export default DialogBox

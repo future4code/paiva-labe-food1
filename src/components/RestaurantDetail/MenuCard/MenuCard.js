@@ -4,7 +4,7 @@ import GlobalStateContext from '../../../global/GlobalStateContext'
 import useRequestData from '../../../hooks/useRequestData'
 import DialogBox from '../DialogBox/DialogBox'
 import { removeProductToOrder } from '../../../services/placeOrder'
-import { ItensMenu } from './styled'
+import { ProductContainer, ItensMenu, NameCategoy, ProductName, ProdDescription, ProdPrice, AddRemButton, QnttProductInCart, ViewBoxDialog } from './styled'
 
 const MenuCard = () => {
 
@@ -44,26 +44,19 @@ const MenuCard = () => {
     }
 
     const renderButtonCart = (prod) => {
+        const index = order.findIndex((productInOrder) => {
+            if(productInOrder.id === prod.id) {
+              return true
+            } else {
+              return false
+            }
+        })
         return (
-            <button onClick={() => quantitySelection(prod.id)}>
+            <AddRemButton onClick={() => quantitySelection(prod.id)} order={order} index={index}>
                 {
-                    order.length > 0 
-                    ? 
-                        (order.findIndex((productInOrder) => {
-                            if (productInOrder.id === prod.id) {
-                                return true
-                            } else {
-                                return false
-                            }
-                        }) === -1 
-                        ? 
-                            "adicionar" 
-                        : 
-                            "remover")
-                    :
-                        "adicionar"
+                    order.length > 0 ? index === -1 ? "adicionar" : "remover" : "adicionar"
                 }
-            </button>
+            </AddRemButton>
         )
     }    
 
@@ -76,10 +69,9 @@ const MenuCard = () => {
             }
         })
         return (
-            <p>
+            <QnttProductInCart order={order} index={index}>
                 {order.length > 0 && index !== -1 && `${(order[index]).quantity}`}
-            </p>
-                    
+            </QnttProductInCart>          
         )
     }
 
@@ -88,19 +80,21 @@ const MenuCard = () => {
         const renderCardMenu = groupByCategory[`${category}`] && groupByCategory[`${category}`].map((prod) => {
             return (
                 <div>
-                    <ItensMenu src={prod.photoUrl} alt={"foto do prato"} />
-                    <h4>{prod.name}</h4>
-                    <p>{prod.description}</p>
-                    <p>{prod.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
-                    {renderButtonCart(prod)}
-                    {renderQuantityCart(prod)}
+                    <ProductContainer prod={prod} idProdSelect={idProdSelect} showDialog={showDialog}>
+                        <ItensMenu src={prod.photoUrl} alt={"foto do prato"} />
+                        <ProductName>{prod.name}</ProductName>
+                        <ProdDescription>{prod.description}</ProdDescription>
+                        <ProdPrice>{prod.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</ProdPrice>
+                        {renderButtonCart(prod)}
+                        {renderQuantityCart(prod)}
+                    </ProductContainer>
                     {prod.id == idProdSelect && showDialog && <DialogBox idRest={params.id} product={prod} setShowDialog={setShowDialog} />}
                 </div>
             )
         })
         return (
             <div>
-                <h2>{category}</h2>
+                <NameCategoy>{category}</NameCategoy>
                 {renderCardMenu}
             </div>
         )
