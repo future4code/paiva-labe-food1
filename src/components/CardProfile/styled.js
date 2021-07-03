@@ -3,17 +3,7 @@ import { secondaryColor} from '../../constants/colors'
 
 export const Container = styled.div `
     width: 360px;
-    height: 640px;
-    margin: auto;
-`
-export const Header = styled.div `
-    width: 100%;
-    height: 64px;
-    margin: 0 0 16px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.25);
-    background-color: #ffffff;
+    height: 527px;
 `
 export const Profile = styled.div `
     height: 102px;
@@ -81,4 +71,11 @@ export const AddressButton = styled.button `
     margin-right: 16px;
     margin-left: 304px;
     border: none;
+`
+
+export const OrderContainer = styled.div `
+    height: 306px;
+    width: 360px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 `

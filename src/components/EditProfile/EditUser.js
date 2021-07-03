@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import useForm from '../../hooks/useForm';
 import { updateProfile } from '../../services/user';
-import {goToProfile} from '../../routes/coordinator';
 import { useHistory } from 'react-router-dom'
 import GlobalStateContext from '../../global/GlobalStateContext';
-import {Container, Header, EditUserContainer, StyledInput, StyledButton} from './styled'
+import {Container, EditUserContainer, StyledInput, StyledButton} from './styled'
 
 const EditUser = () => {
 
@@ -21,10 +20,6 @@ const EditUser = () => {
     }
     return (
         <Container>
-            <Header>
-                <button onClick={() => goToProfile(history)}>Voltar</button>
-                Editar
-            </Header>
             <form onSubmit={onSubmitProfile}>
                 <EditUserContainer>
                     <StyledInput 
