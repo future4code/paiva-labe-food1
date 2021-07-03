@@ -18,6 +18,8 @@ export const FeedImage = styled.img`
   height: 120px;
   margin: 0 0 12px;
   border-bottom: 0.25px solid darkgrey;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 `
 
 export const FeedInfoContainer = styled.div`

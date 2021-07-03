@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import GlobalStateContext from '../../../global/GlobalStateContext'
 import useRequestData from '../../../hooks/useRequestData'
-import {ProfileRetaurant} from './styled'
+import {ProfileRetaurant, Restaurant, Category, DeliveryContainer, DeliveryTime, Shipping, Address} from './styled'
 
 const InfosRestaurantCard = () => {
 
@@ -15,11 +15,13 @@ const InfosRestaurantCard = () => {
             {infosRestaurant && infosRestaurant.restaurant &&
                 <div>
                     <ProfileRetaurant src={infos.logoUrl} alt={"capa restaurante"} />
-                    <h1>{infos.name}</h1>
-                    <p>{infos.category}</p>
-                    <p>{`${infos.deliveryTime} min`}</p>
-                    <p>{`Frete ${infos.shipping.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`}</p>
-                    <p>{infos.address}</p>
+                    <Restaurant>{infos.name}</Restaurant>
+                    <Category>{infos.category}</Category>
+                    <DeliveryContainer>
+                        <DeliveryTime>{`${infos.deliveryTime} min`}</DeliveryTime>
+                        <Shipping>{`Frete ${infos.shipping.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`}</Shipping>
+                    </DeliveryContainer>
+                    <Address>{infos.address}</Address>
                 </div>
             }
         </div>
