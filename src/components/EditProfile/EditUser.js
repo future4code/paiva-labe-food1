@@ -1,13 +1,11 @@
 import React, { useContext } from 'react';
 import useForm from '../../hooks/useForm';
 import { updateProfile } from '../../services/user';
-import { useHistory } from 'react-router-dom'
 import GlobalStateContext from '../../global/GlobalStateContext';
 import {Container, EditUserContainer, StyledInput, StyledButton} from './styled'
 
 const EditUser = () => {
 
-    const history = useHistory()
     const {form, onChange, cleanFields} = useForm({name: "", email: "", cpf: ""})
     const {profile} = useContext(GlobalStateContext)
     const profileName = profile.user && profile.user.name

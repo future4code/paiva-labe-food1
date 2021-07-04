@@ -19,7 +19,6 @@ const useRequestData = (initialState, url, headerParam) => {
                 setData(res.data)
             })
             .catch((err) => {
-                console.log(err)
                 alert("Use request")
             })
         } else {

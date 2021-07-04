@@ -14,7 +14,6 @@ const GlobalState = (props) => {
     const {data: orderHistory} = useRequestData({}, `/orders/history`, token);
     const {data: restaurantsInfo} = useRequestData({}, `/restaurants`, token);
     const [order, setOrder] = useState([])
-    console.log(order)
 
     return <GlobalStateContext.Provider value={{order, setOrder, address, profile, getProfile, orderHistory, restaurantsInfo}} >
         {props.children}
