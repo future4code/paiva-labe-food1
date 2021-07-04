@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MenuCard from '../../components/RestaurantDetail/MenuCard/MenuCard'
 import Header from '../../components/Header/Header'
 import UseProtectedPage from '../../hooks/useProtectedPage'
@@ -8,6 +8,11 @@ import InfosRestaurantCard from '../../components/RestaurantDetail/InfosRestaura
 const DetailPage = () => {
 
   UseProtectedPage()
+
+  useEffect(() => {
+    document.title = "Menu do restaurante"
+  })
+
 
   return (
     <div>

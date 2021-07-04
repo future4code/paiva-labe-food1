@@ -12,6 +12,10 @@ const SearchPage = () => {
   const allRestaurants = restaurantsInfo.restaurants;
   const [nameFilter, setNameFilter] = useState("");
 
+  useEffect(() => {
+    document.title = "Busca";
+  })
+
   const handleNameFilter = (event) => {
     setNameFilter(event.target.value)
   }

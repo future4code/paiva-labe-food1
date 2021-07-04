@@ -20,9 +20,10 @@ const FeedPage = () => {
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("hasAddress"))) {
       getRestaurantsInfo();
+      document.title = "Restaurantes";
     } else {
       alert ("Usuário sem endereço! Favor, cadastrar endereço")
-    }
+    }    
   }, []);
 
   const filterByCategory = (category) => {
