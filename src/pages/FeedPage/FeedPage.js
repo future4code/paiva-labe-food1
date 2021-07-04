@@ -1,7 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { goToSearch } from '../../routes/coordinator';
 import { useHistory } from 'react-router-dom';
-import GlobalStateContext from '../../global/GlobalStateContext';
 import CardFeedPage from '../../components/CardFeed/CardFeedPage';
 import { Feed, FeedMainContainer, TransitionButton, CategoriesContainer, CategorieParagraph } from './styled';
 import Header from '../../components/Header/Header';
@@ -9,13 +8,22 @@ import Footer from '../../components/Footer/Footer';
 import { Scrollbars } from 'react-custom-scrollbars';
 import searchIcon from '../../assets/FeedPageIcons/search.svg';
 import useProtectedPage from '../../hooks/useProtectedPage';
+import useRequestData from '../../hooks/useRequestData';
 
 const FeedPage = () => {
   useProtectedPage();
   const history = useHistory();
-  const { restaurantsInfo } = useContext(GlobalStateContext);
+  const { data: restaurantsInfo, getData: getRestaurantsInfo } = useRequestData({}, `/restaurants`, {auth: localStorage.getItem("token")});
   const allRestaurants = restaurantsInfo.restaurants;
   const [categoryFilter, setCategoryFilter] = useState("");
+
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem("hasAddress"))) {
+      getRestaurantsInfo();
+    } else {
+      alert ("Usuário sem endereço! Favor, cadastrar endereço")
+    }
+  }, []);
 
   const filterByCategory = (category) => {
     if (categoryFilter !== category) {

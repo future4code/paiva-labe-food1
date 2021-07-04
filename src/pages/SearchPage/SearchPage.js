@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import GlobalStateContext from '../../global/GlobalStateContext';
 import CardSearchPage from '../../components/CardSearch/CardSearchPage';
 import Header from '../../components/Header/Header';
@@ -10,7 +10,7 @@ const SearchPage = () => {
   useProtectedPage();
   const { restaurantsInfo } = useContext(GlobalStateContext);
   const allRestaurants = restaurantsInfo.restaurants;
-  const [nameFilter, setNameFilter] = useState("")
+  const [nameFilter, setNameFilter] = useState("");
 
   const handleNameFilter = (event) => {
     setNameFilter(event.target.value)

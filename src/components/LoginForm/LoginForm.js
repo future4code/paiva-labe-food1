@@ -7,14 +7,13 @@ import { login } from '../../services/user';
 import senha from '../../assets/inputIcons/senha.png';
 
 const LoginForm = () => {
+  const history = useHistory()
   const {form, onChange, cleanFields} = useForm({ email: "", password: "" });
 
   const onSubmit = (event) => {
     event.preventDefault()
-    login(form, cleanFields)
+    login(form, cleanFields, history)
   }
-
-  const history = useHistory()
 
   return (
       <InputsContainer>
