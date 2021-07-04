@@ -37,15 +37,25 @@ Foi decidido pelo grupo que a página de carrinho e seu desenvolvimento seria re
 
 ## Imagens do projeto
 ![splash-screen](https://user-images.githubusercontent.com/81280346/124370870-451eaf80-dc52-11eb-90f6-05b157e77d7a.png)
+
 ![login](https://user-images.githubusercontent.com/81280346/124370871-4819a000-dc52-11eb-8233-0279d5c795e4.png)
+
 ![cadastro-usuario](https://user-images.githubusercontent.com/81280346/124370874-4a7bfa00-dc52-11eb-9f00-c90050d565c6.png)
+
 ![cadastro-endereço](https://user-images.githubusercontent.com/81280346/124370875-4bad2700-dc52-11eb-9fb8-952bfd0e845b.png)
+
 ![menu](https://user-images.githubusercontent.com/81280346/124370876-4ea81780-dc52-11eb-91e3-87dcf77ccfcc.png)
+
 ![busca](https://user-images.githubusercontent.com/81280346/124370877-4fd94480-dc52-11eb-8964-5a74aa4b8dec.png)
+
 ![detalhes](https://user-images.githubusercontent.com/81280346/124370878-510a7180-dc52-11eb-84c4-309e88023ef8.png)
+
 ![carrinho](https://user-images.githubusercontent.com/81280346/124370879-54056200-dc52-11eb-941d-b20192a84d89.png)
+
 ![perfil](https://user-images.githubusercontent.com/81280346/124370882-55368f00-dc52-11eb-875d-93588d004829.png)
+
 ![editar-usuario](https://user-images.githubusercontent.com/81280346/124370884-5667bc00-dc52-11eb-937b-4a5e6b5655ec.png)
+
 ![editar-endereco](https://user-images.githubusercontent.com/81280346/124370885-57005280-dc52-11eb-9537-03519e3e7fa5.png)
 
 
