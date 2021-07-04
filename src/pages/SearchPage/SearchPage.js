@@ -1,19 +1,20 @@
-import React, { useContext, useEffect, useState } from 'react';
-import GlobalStateContext from '../../global/GlobalStateContext';
+import React, { useEffect, useState } from 'react';
 import CardSearchPage from '../../components/CardSearch/CardSearchPage';
 import Header from '../../components/Header/Header';
 import { Search, SearchMainContainer, InputSearch, InitialSearchBox } from './styled';
 import { Scrollbars } from 'react-custom-scrollbars';
 import useProtectedPage from '../../hooks/useProtectedPage';
+import useRequestData from '../../hooks/useRequestData';
 
 const SearchPage = () => {
   useProtectedPage();
-  const { restaurantsInfo } = useContext(GlobalStateContext);
+  const { data: restaurantsInfo, getData: getRestaurantsInfo } = useRequestData({}, `/restaurants`, {auth: localStorage.getItem("token")});
   const allRestaurants = restaurantsInfo.restaurants;
   const [nameFilter, setNameFilter] = useState("");
 
   useEffect(() => {
     document.title = "Busca";
+    getRestaurantsInfo();
   })
 
   const handleNameFilter = (event) => {
