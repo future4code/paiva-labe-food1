@@ -61,4 +61,4 @@ Foi decidido pelo grupo que a página de carrinho e seu desenvolvimento seria re
 
 ## Wireframe: https://zpl.io/scene/aX1LDOP
 
-## Link do Surge: http://labefood1-paiva.surge.sh 
+## Link do Surge: labefood-rappi4a.surge.sh 
