@@ -50,7 +50,7 @@ Foi decidido pelo grupo que a página de carrinho e seu desenvolvimento seria re
 
 ![detalhes](https://user-images.githubusercontent.com/81280346/124370878-510a7180-dc52-11eb-84c4-309e88023ef8.png)
 
-![carrinho](https://user-images.githubusercontent.com/81280346/124370879-54056200-dc52-11eb-941d-b20192a84d89.png)
+![carrinho](https://user-images.githubusercontent.com/81280346/124517042-5df5a500-ddb9-11eb-9663-fe9aaa2586c8.png)
 
 ![perfil](https://user-images.githubusercontent.com/81280346/124370882-55368f00-dc52-11eb-875d-93588d004829.png)
 
@@ -61,4 +61,4 @@ Foi decidido pelo grupo que a página de carrinho e seu desenvolvimento seria re
 
 ## Wireframe: https://zpl.io/scene/aX1LDOP
 
-## Link do Surge: labefood-rappi4a.surge.sh 
+## Link do Surge: http://labefood1-paiva.surge.sh 
