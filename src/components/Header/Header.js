@@ -10,6 +10,12 @@ const Header = () => {
     const pathname = history.location.pathname;
     const params = useParams();
 
+    const goToLoginAndRemoveStorageInfo = () => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("hasAddress");
+        goToLogin(history);
+    }
+
     const renderBackIcon = () => {
         if ((pathname === "/menu") || (pathname === "/carrinho") || (pathname === "/perfil")){
             return (
@@ -21,7 +27,7 @@ const Header = () => {
             )
         } else if (pathname === "/cadastro/endereco") {
             return (
-                <IconBox onClick={() => {goToLogin(history)}} src={backIcon} alt={"ícone de voltar"} />
+                <IconBox onClick={() => {goToLoginAndRemoveStorageInfo()}} src={backIcon} alt={"ícone de voltar"} />
             )
         } else if (pathname === "/feed/buscar") {
             return (

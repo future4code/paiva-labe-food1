@@ -15,15 +15,21 @@ export const updateProfile = (info, body, cleanFields) => {
     })
 }
 
-export const login = (body, cleanFields) => {
+export const login = (body, cleanFields, history) => {
     
     axios.post(`${BASE_URL}/login`, body)
         .then((res) => {
             localStorage.setItem("token", res.data.token)
             localStorage.setItem("hasAddress", res.data.user.hasAddress)
-            cleanFields()
+            if(JSON.parse(localStorage.getItem("hasAddress")) === false){
+                goToAddressScreen(history);
+            } else {
+                goToFeed(history);
+            }
+            cleanFields();
         })
         .catch((err) => {
+            console.log(err)
             alert("Erro ao fazer login, tente novamente")
         })
 }
@@ -33,12 +39,12 @@ export const signUp = (body, cleanFields, history) => {
     axios.post(`${BASE_URL}/signup`, body)
         .then((res) => {
             localStorage.setItem("token", res.data.token)
+            localStorage.setItem("hasAddress", res.data.user.hasAddress)
             cleanFields()
             goToAddressScreen(history)
-
         })
         .catch((err) => {
-            alert("Erro no cadastro, tente novamente")
+            alert(err.response.data.message)
         })
 }
 
@@ -53,9 +59,9 @@ export const addAddress = (body, cleanFields, history) => {
     axios.put(`${BASE_URL}/address`, body, header)
         .then((res) => {
             localStorage.setItem("token", res.data.token)
+            localStorage.setItem("hasAddress", res.data.user.hasAddress)
             cleanFields()
             goToFeed(history)
-
         })
         .catch((err) => {
             alert("Erro ao cadastrar endereço, tente novamente.")

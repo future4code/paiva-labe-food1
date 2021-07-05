@@ -1,15 +1,18 @@
 import { useLayoutEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { goToAddressScreen } from "../routes/coordinator";
+import { goToLogin } from "../routes/coordinator";
 
 export const UseProtectedPage = () => {
     const history = useHistory();
 
     useLayoutEffect(() => {
         const token = localStorage.getItem("token");
-        const hasAddress = localStorage.getItem("hasAddress")
+        const hasAddress = JSON.parse(localStorage.getItem("hasAddress"));
+
         if (!token && !hasAddress) {
-            goToAddressScreen(history)
+            goToLogin(history);
+        } else if (token && !hasAddress) {
+            goToLogin(history);
         }
     })
 }

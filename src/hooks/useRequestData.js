@@ -8,7 +8,7 @@ const useRequestData = (initialState, url, headerParam) => {
     const [data, setData] = useState(initialState)
     
     const getData = () => {
-        if(localStorage.getItem("token")){
+        if(localStorage.getItem("token") && JSON.parse(localStorage.getItem("hasAddress"))){
             const header = {
                 headers: headerParam
             }
