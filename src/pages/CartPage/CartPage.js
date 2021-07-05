@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import useProtectedPage from '../../hooks/useProtectedPage';
-
+import Cart from '../../components/Cart/Carts';
 
 const CartPage = () => {
   useProtectedPage();
@@ -15,7 +15,7 @@ const CartPage = () => {
   return (
     <div>
       <Header />
-      <h1>Tela de Cadastro de Endereço</h1>
+      <Cart/>
       <Footer />
     </div>
   );

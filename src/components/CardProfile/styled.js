@@ -3,7 +3,7 @@ import { secondaryColor} from '../../constants/colors'
 
 export const Container = styled.div `
     width: 360px;
-    height: 527px;
+    height: 510px;
 `
 export const Profile = styled.div `
     height: 102px;
@@ -15,7 +15,7 @@ export const AddressText = styled.p `
     padding: 16px 16px 0px 16px;
     margin-top: 0;
 `
-export const Adress = styled.div `
+export const Address = styled.div `
     width: 100%;
     height: 76px;
     background-color: #eeeeee;

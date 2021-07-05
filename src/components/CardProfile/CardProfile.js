@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import GlobalStateContext from "../../global/GlobalStateContext";
-import { AddressText, Container, Profile, Adress, OrderHistory, OrderCard, OrderContainer, Text, TitleCard, TextContainer, ProfileButton, AddressButton } from "./styled";
+import { AddressText, Container, Profile, Address, OrderHistory, OrderCard, OrderContainer, Text, TitleCard, TextContainer, ProfileButton, AddressButton } from "./styled";
 import edit from '../../assets/inputIcons/edit.png'
 import { goToEditAddress, goToEditUser } from "../../routes/coordinator";
 import { useHistory } from "react-router";
@@ -43,18 +43,18 @@ const CardProfile = () => {
                 {profileEmail}
                 {profileCPF}
                 <ProfileButton onClick={() => onClickEditUser()}>
-                    <img src={edit} />
+                    <img src={edit} alt="Editar dados do usuário"/>
                 </ProfileButton>
             </Profile>
-            <Adress>
+            <Address>
                 <AddressText>
                     Endereço cadastrado
                 </AddressText>
                 <AddressButton onClick={() => onClickEditAddress()}>
-                    <img src={edit} />
+                    <img src={edit} alt="Editar endereço"/>
                 </AddressButton>
                 {addressInfo}
-            </Adress>
+            </Address>
             <OrderHistory>
                 Histórico de pedidos
             </OrderHistory>
