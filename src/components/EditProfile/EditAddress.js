@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom'
 import useForm from '../../hooks/useForm';
 import {updateProfile} from '../../services/user';
-import { Container, EditAddressContainer, StyledInput, StyledButton } from './styled';
+import { Container, EditAddressContainer, StyledInput, StyledButton, LabelBairro, LabelCidade, LabelComplemento, LabelEstado, LabelLogradouro, LabelNumero } from './styled';
 import GlobalStateContext from '../../global/GlobalStateContext';
 
 const EditAddress = () => {
@@ -23,6 +23,12 @@ const EditAddress = () => {
     }
     return (
         <Container>
+            <LabelLogradouro>Logradouro*</LabelLogradouro>
+            <LabelNumero>Número*</LabelNumero>
+            <LabelComplemento>Complemento*</LabelComplemento>
+            <LabelBairro>Bairro*</LabelBairro>
+            <LabelCidade>Cidade*</LabelCidade>
+            <LabelEstado>Estado*</LabelEstado>
             <form onSubmit={onSubmitAddress}>
                 <EditAddressContainer>
                     <StyledInput 

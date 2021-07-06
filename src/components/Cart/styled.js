@@ -126,3 +126,52 @@ export const RemoveButton = styled.button`
     color: #e02020;
     border: 1px solid #e02020;
 `
+export const StyledButton = styled.button `
+  background-color: #e86e5a;
+  width: 100%;
+  margin-top: 16px;
+  height: 42px;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+  font-family: Roboto;
+`
+
+export const Payment = styled.div `
+    border-bottom: 1px solid black;
+    font-family: Roboto;
+    font-size: 16px;
+    
+`
+export const Subtotal = styled.div `
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    margin-right: 16px;
+    margin-left: 16px;
+    font-family: Roboto;
+`
+export const Delivery = styled.div `
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 16px;
+    font-family: Roboto;
+`
+export const CartText = styled.div `
+    display: flex;
+    justify-content: center;
+    font-family: Roboto;
+`
+
+export const Price = styled.div `
+    font-family: Roboto;
+    color: #e86e5a;
+    font-weight: bold;
+`
+
+export const FormContainer = styled.div `
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 8px;
+    font-family: Roboto;
+`

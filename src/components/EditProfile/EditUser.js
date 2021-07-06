@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import useForm from '../../hooks/useForm';
 import { updateProfile } from '../../services/user';
 import GlobalStateContext from '../../global/GlobalStateContext';
-import {Container, EditUserContainer, StyledInput, StyledButton} from './styled'
+import {Container, EditUserContainer, StyledInput, StyledButton, LabelNome, LabelEmail, LabelCpf} from './styled'
 
 const EditUser = () => {
 
@@ -18,6 +18,9 @@ const EditUser = () => {
     }
     return (
         <Container>
+            <LabelNome>Nome*</LabelNome>
+            <LabelEmail>E-mail*</LabelEmail>
+            <LabelCpf>CPF*</LabelCpf>
             <form onSubmit={onSubmitProfile}>
                 <EditUserContainer>
                     <StyledInput 
