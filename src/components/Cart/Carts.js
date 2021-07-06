@@ -1,13 +1,19 @@
 import React, { useContext, useState } from "react";
 import GlobalStateContext from "../../global/GlobalStateContext";
-import { Text, AddressTitle, Address, Container } from "./styled";
-import { ProductContainer, ItensMenu, ProductName, ProdDescription, QnttProductInCart, ProdPrice, RemoveButton } from "./styled";
+import { Text, AddressTitle, Address, Container, Subtotal, FormContainer } from "./styled";
+import { ProductContainer, ItensMenu, ProductName, ProdDescription, QnttProductInCart, ProdPrice, RemoveButton, StyledButton, Payment, Delivery, CartText, Price } from "./styled";
 
 const Cart = () => {
     const { address, order } = useContext(GlobalStateContext)
     
     const addressInfo = address.address ? <Text>{address.address.street}, {address.address.number}</Text> 
     : <Text>Carregando...</Text>
+    
+    console.log(order)
+    let price = 0
+    order ? (order.forEach((item) => {
+        price += item.price * item.quantity
+    })) : (price = 0)
 
     const renderOrder = order.length > 0 ? (order.map((item) => {
         return (
@@ -21,9 +27,9 @@ const Cart = () => {
             </ProductContainer>
         )
     })) : 
-    (<div>
+    (<CartText>
         Carrinho vazio
-    </div>)
+    </CartText>)
     return (
         <Container>
             <Address>
@@ -33,24 +39,29 @@ const Cart = () => {
             {addressInfo}
             </Address>
             {renderOrder}
-            <div>
-                Frete R$
-                <br/>
-                SUBTOTAL R$
-            </div>
+            <Delivery>
+                Frete R$ 0,00
+            </Delivery>
+            <Subtotal>
+                SUBTOTAL R$ <Price>{price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</Price>
+            </Subtotal>
 
-            <div>
-                Forma de pagamento
+            <FormContainer>
+                <Payment>
+                    Forma de pagamento
+                </Payment>
                 <form>
-                    <input type="radio" name="dinheiro" value="dinheiro"/>
+                    <input type="radio" name="metodo" value="dinheiro"/>
                     <label for="dinheiro">Dinheiro</label>
 
                     <br/>
                     
-                    <input type="radio" name="cartao" value="cartao"/>
+                    <input type="radio" name="metodo" value="cartao"/>
                     <label for="cartao">Cartão de crédito</label>
+
+                    <StyledButton>Confirmar</StyledButton>
                 </form>
-            </div>
+            </FormContainer>
         </Container>
     )
 }
