@@ -1,68 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Projeto LabeFood
+Este é um projeto de FrontEnd Web utilizando React.js
 
-## Available Scripts
+## Sobre
 
-In the project directory, you can run:
+Projeto básico de aplicativo de delivery e serviços, responsivo e construído para tela MotoG e GalaxyS5.
 
-### `npm start`
+Divisão base de tarefas :
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Este projeto foi realizado sobre a seguinte divisão de tarefas:
+- Vitor Suzuki: responsável pelas páginas de entrada (tela de carregamento, login e cadastros iniciais);
+- Bruno Santos e Priscila Carvalho: através de pair programming, foram responsáveis pelo desenvolvimento das telas de restaurantes e de pesquisa;
+- Matheus Garrido: responsável pela página de detalhes de restaurantes;
+- Carlos Henrique: responsável pelas páginas de perfil e edição de cadastro/endereço.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Foi decidido pelo grupo que a página de carrinho e seu desenvolvimento seria realizado coletivamente, em virtude de sua integração e interferência nas demais páginas do aplicativo.
 
-### `npm test`
+## O que funciona
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Transição de páginas funcionais;
+- Proteções de tela por autenticação/autorização funcionais;
+- Cadastro de usuários e endereço funcionais;
+- Campos de pesquisa e seletores de filtro de restaurantes funcionais;
+- Adição e remoção de produtos em detalhes funcional;
+- Visualização de histórico de pedidos funcional;
+- Alteração de cadastro funcional.
 
-### `npm run build`
+## O que não funciona
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Tela de entrada não implementada;
+- Busca é restrita ao nome exato do restaurante, sendo necessário diferenciar letras maiúscula e minúscula;
+- Texto de confirmação de restaurante não encontrado não implementado;
+- Telas de carregamento não implementadas em todas as páginas;
+- Pedidos em carrinho não funcional;
+- Responsividade restrita ao width 360px e height: 640px;
+- Logout não implementado.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Imagens do projeto
+![splash-screen](https://user-images.githubusercontent.com/81280346/124370870-451eaf80-dc52-11eb-90f6-05b157e77d7a.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![login](https://user-images.githubusercontent.com/81280346/124370871-4819a000-dc52-11eb-8233-0279d5c795e4.png)
 
-### `npm run eject`
+![cadastro-usuario](https://user-images.githubusercontent.com/81280346/124370874-4a7bfa00-dc52-11eb-9f00-c90050d565c6.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![cadastro-endereço](https://user-images.githubusercontent.com/81280346/124370875-4bad2700-dc52-11eb-9fb8-952bfd0e845b.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![menu](https://user-images.githubusercontent.com/81280346/124370876-4ea81780-dc52-11eb-91e3-87dcf77ccfcc.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![busca](https://user-images.githubusercontent.com/81280346/124370877-4fd94480-dc52-11eb-8964-5a74aa4b8dec.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![detalhes](https://user-images.githubusercontent.com/81280346/124370878-510a7180-dc52-11eb-84c4-309e88023ef8.png)
 
-## Learn More
+![carrinho](https://user-images.githubusercontent.com/81280346/124517042-5df5a500-ddb9-11eb-9663-fe9aaa2586c8.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![perfil](https://user-images.githubusercontent.com/81280346/124370882-55368f00-dc52-11eb-875d-93588d004829.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![editar-usuario](https://user-images.githubusercontent.com/81280346/124370884-5667bc00-dc52-11eb-937b-4a5e6b5655ec.png)
 
-### Code Splitting
+![editar-endereco](https://user-images.githubusercontent.com/81280346/124370885-57005280-dc52-11eb-9537-03519e3e7fa5.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+## Wireframe: https://zpl.io/scene/aX1LDOP
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Link do Surge: http://labefood1-paiva.surge.sh 
